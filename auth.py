@@ -8,7 +8,7 @@ PASSWORD = "password"
 
 @auth_routes.route('/')
 def login_page():
-    return render_template('login.html')
+    return render_template('index.html')
 
 @auth_routes.route('/login', methods=['POST'])
 def login():
