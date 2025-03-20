@@ -1,0 +1,163 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+/* Background with Blurred Black Overlay */
+body {
+    background: url('https://www.sonatech.ac.in/photo-gallery/campus/images/Sona-main-Building.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Black Blur Overlay */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+    /* backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); */
+    z-index: 0;
+  }
+  
+  /* Glass Effect for Container */
+  .container {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+    padding: 40px;
+    border-radius: 12px;
+    /*backdrop-filter: blur(20px);  */
+    /* -webkit-backdrop-filter: blur(20px); */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+/* Other Styling (Buttons, Text, Form) remains the same */
+
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1d3557;
+  }
+  h3{
+    padding: 20px; 
+  }
+  p {
+    color: #1d3557;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    font-size: large;
+    text-align: left;
+  }
+  .schedules{
+    text-align: left;
+    padding-left: 0px;
+    font-size: large;
+    color:#1d3557;
+    font-weight: bold;
+  }
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    text-align: left;
+    margin-bottom: 8px;
+    color: #1d3557;
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Special Button Styles */
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn.success {
+    background-color: #28a745;
+  }
+  
+  .btn.success:hover {
+    background-color: #218838;
+  }
+  
+  .btn.danger {
+    background-color: #dc3545;
+  }
+  
+  .btn.danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Status Display */
+  .status {
+    font-weight: bold;
+    color: #1d3557;
+  }
+  
+  /* Links */
+  .link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link.danger {
+    color: #dc3545;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  

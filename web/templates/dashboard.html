@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <script src="../static/script.js"></script>
+  <title>Smart Lock System - Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard</h1>
+    <p class="status">Current Lock Status: <span class="status" id="lockStatus">{{ lock_status }}</span></p>
+
+    <form method="post" action="/lock/toggle">
+      <button type="submit" name="action" value="Lock" class="btn danger">Lock</button>
+      <button type="submit" name="action" value="Unlock" class="btn success">Unlock</button>
+    </form>
+
+    <h3 class="schedules">Reschedule</h3>
+    <form method="post" action="/lock/schedule">
+      <label for="new_time">New Lock Time (HH:MM):</label>
+      <input type="time" id="new_time" name="new_time" required />
+      <button type="submit" class="btn">Reschedule</button>
+    </form>
+    <button class="btn danger" onclick="logout()">Logout</button>
+</div>
+
+<!-- JavaScript Function for Logout -->
+<script>
+  function logout() {
+    window.location.href = 'index.html';
+  }
+</script>
+</body>
+</html>
