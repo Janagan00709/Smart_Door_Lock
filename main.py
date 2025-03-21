@@ -9,7 +9,7 @@ import supervision as sv
 from picamera2 import Picamera2
 
 # Setup GPIO
-LOCK_PIN = 17
+LOCK_PIN = 18
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(LOCK_PIN, GPIO.OUT)
 
